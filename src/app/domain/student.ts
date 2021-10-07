@@ -3,7 +3,7 @@ export class Student {
         public ID: number,
         public LastName: string,
         public FirstMidName: string,
-        public Enrollmentdate: Date,
+        public EnrollmentDate: Date,
         public FullName: string
 
     ){}

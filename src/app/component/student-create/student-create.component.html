@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Create</h2>
+    <hr>
+
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+            {{msg}}
+        </div>
+    </div>
+
+
+
+    <form #studentForm="ngForm">
+        <div class="form-row">
+            <div class="col-md-4 form-floating">
+
+                <input type="text" id="LastName" name="Lastname" placeholder="Enter the last Name" class="form-control"
+                    #LastName [(ngModel)]="student.LastName" autocomplete="off" />
+                <label for="LastName">Last Name</label>
+            </div>
+            <div class="col-md-4 form-floating">
+                <input type="text" id=" FirstMidName" name=" FirstMidName" placeholder="Enter the last Name"
+                    class="form-control" #FirstMidName [(ngModel)]="student.FirstMidName" autocomplete="off" />
+                <label for="FirstMidName">First Mid Name</label>
+
+
+            </div>
+            <div class="col-md-4 form-floating">
+                <input type="date" id=" EnrollmentDate" name=" EnrollmentDate" placeholder="Enter the last Name"
+                    class="form-control" #EnrollmentDate [(ngModel)]="student.EnrollmentDate" autocomplete="off" />
+                <label for="EnrollmentDate">Enrollment Date</label>
+
+
+            </div>
+
+        </div>
+        <button class="btn btn-outline-primary" (click)="create()">Create</button>
+        <a class="btn btn-outline-primary" [routerLink]="['/student-list']">Back</a>
+    </form>
+</div>
