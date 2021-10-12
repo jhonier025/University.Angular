@@ -21,18 +21,18 @@ export class StudentCreateComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public  create(){
-    if (this.student.LastName === ''){
+  public create() {
+    if (this.student.LastName === '') {
       this.showMsg = true;
       this.msg = 'The field last name is requeride';
       this.type = 'warning';
       return;
 
     }
-    this.studentServices.create(this.student).subscribe(data =>{
-    this.router.navigate(['student-list']);
+    this.studentServices.create(this.student).subscribe(data => {
+      this.router.navigate(['student-list']);
 
-    }, error =>{
+    }, error => {
       this.showMsg = true;
       this.msg = error;
       this.type = 'danger';

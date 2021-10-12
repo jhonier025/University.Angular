@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 
 /// services provider
 import {StudentService} from './service/student.service';
+import {DepartmentService} from './service/department.service';
+import {InstructorService} from './service/instructor.service';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +16,7 @@ import { StudentListComponent } from './component/student-list/student-list.comp
 import { StudentCreateComponent } from './component/student-create/student-create.component';
 import { StudentEditComponent } from './component/student-edit/student-edit.component';
 import { StudentDeleteComponent } from './component/student-delete/student-delete.component';
+import { DepartmentCreateComponent } from './component/department-create/department-create.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import { StudentDeleteComponent } from './component/student-delete/student-delet
     StudentListComponent,
     StudentCreateComponent,
     StudentEditComponent,
-    StudentDeleteComponent
+    StudentDeleteComponent,
+    DepartmentCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,10 @@ import { StudentDeleteComponent } from './component/student-delete/student-delet
     FormsModule
   ],
   providers: [
-   StudentService
+   StudentService,
+   DepartmentService,
+   InstructorService
+
   ],
   bootstrap: [AppComponent]
 })
